@@ -70,7 +70,10 @@
       });
 
       function newQuestion() {
-        return questions[Math.floor(Math.random()*questions.length)];
+        let questionIdx = Math.floor(Math.random()*questions.length);
+        let question = questions[questionIdx];
+        questions.splice(questionIdx,1);
+        return question
       }
     </script>
   </body>
